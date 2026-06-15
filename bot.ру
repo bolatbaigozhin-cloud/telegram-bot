@@ -336,5 +336,5 @@ async def answer(message: types.Message):
         await message.answer(f"Задача {data['q_num']+1}: {q['q']}")
 
 if __name__ == "__main__":
-    asyncio.run(dp.start_polling(bot))
+    asyncio.run(dp.start_polling(bot)) 
     
