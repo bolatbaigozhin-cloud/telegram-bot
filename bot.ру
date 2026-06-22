@@ -1,1 +1,17 @@
- Remove leaked token
+import os
+import asyncio
+import random
+from aiogram import Bot, Dispatcher, types, F
+from aiogram.filters import Command
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+
+TOKEN = os.getenv("TELEGRAM_TOKEN")  # Берет токен из Render, не из кода!
+bot = Bot(token=TOKEN)
+dp = Dispatcher()
+
+# дальше твои хендлеры @dp.message() и т.д.
+async def main():
+    await dp.start_polling(bot)
+
+if _name_ == "_main_":
+    asyncio.run(main())
